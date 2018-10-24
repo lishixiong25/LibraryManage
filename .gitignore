@@ -89,10 +89,6 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
-.idea/.name
-.idea/compiler.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
 library-management.iml
 xiong.library.iml
+/.idea/
