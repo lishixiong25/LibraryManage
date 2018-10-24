@@ -7,7 +7,12 @@ import java.math.BigDecimal;
  * @since 2018/10/24 13:23
  * Singularity Sky Technologies Limited.
  */
-public class Librarian  extends Person{
+public class Librarian extends Person {
+  private String name;          //姓名
+  private String personNumber;  //工作编号
+  private String language;      //语言
+  private BigDecimal account;
+
   @Override
   public String toString() {
     return "Librarian{" +
@@ -16,11 +21,6 @@ public class Librarian  extends Person{
         ", language='" + language + '\'' +
         '}';
   }
-
-  private String name;          //姓名
-  private String personNumber;  //工作编号
-  private String language;      //语言
-  private BigDecimal account;
 
   @Override
   public String getName() {

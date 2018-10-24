@@ -7,7 +7,15 @@ import java.math.BigDecimal;
  * @since 2018/10/24 13:45
  * Singularity Sky Technologies Limited.
  */
-public class Books   {
+public class Books {
+  private String name;             //书名
+  private String size;             //书的大小
+  private String type;             //类型
+  private String pictureQuality;   //画质
+  private String suitable;         //适应年龄
+  private String location;         //位置
+  private BigDecimal price;        //价格
+
   @Override
   public String toString() {
     return "Books{" +
@@ -20,14 +28,6 @@ public class Books   {
         ", price=" + price +
         '}';
   }
-
-  private String name;             //书名
-  private String size;             //书的大小
-  private String type;             //类型
-  private String pictureQuality;   //画质
-  private String suitable;         //适应年龄
-  private String location;         //位置
-  private BigDecimal price;        //价格
 
   public String getSize() {
     return size;

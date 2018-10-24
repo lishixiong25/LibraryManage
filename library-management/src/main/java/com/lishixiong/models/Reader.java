@@ -7,7 +7,7 @@ import java.math.BigDecimal;
  * @since 2018/10/24 13:23
  * Singularity Sky Technologies Limited.
  */
-public class Reader  extends Person{
+public class Reader extends Person {
   private BigDecimal alipay;
 
   public BigDecimal getAlipay() {
