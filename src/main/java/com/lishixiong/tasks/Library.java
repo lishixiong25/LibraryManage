@@ -1,8 +1,11 @@
 package com.lishixiong.tasks;
 
+import com.lishixiong.models.Education;
 import com.lishixiong.models.Librarian;
 import com.lishixiong.models.Reader;
-import com.lishixiong.utils.BooksPool;
+import com.lishixiong.models.Science;
+import com.lishixiong.utils.IOUtils;
+import com.lishixiong.utils.VerbReaderPool;
 
 import java.math.BigDecimal;
 import java.text.MessageFormat;
@@ -21,21 +24,24 @@ import static com.lishixiong.utils.IOUtils.println;
  */
 public class Library implements Runnable {
 
-  private BooksPool booksPool;
-  private Reader reader;
+  private VerbReaderPool readPool;
+  private int LOOP = 1;
+  private int OVER_READER = 0;
   private Librarian librarian;
-
+  private Science science = null;
+  private Education education = null;
 
   private ScheduledExecutorService executors;
 
   public Library(ScheduledExecutorService executors) {
     this.executors = executors;
     this.librarian = new Librarian();
-    this.booksPool = new BooksPool();
+    this.readPool = new VerbReaderPool();
+    librarian.setName("二狗");
     librarian.setAccount(new BigDecimal("0"));
     librarian.setLanguage(new String("陕西话"));
     librarian.setPersonNumber(new String("001"));
-    librarian.setDressed(new String("工作服"));
+
   }
 
   @Override
@@ -49,6 +55,19 @@ public class Library implements Runnable {
         executors.shutdown();
         println("滚蛋吧");
       }
+
+     for(Reader reader : readPool.getReaders()){
+       if(reader == null){
+         continue;
+       }
+
+
+       }
+       String line = IOUtils.getScanner().nextLine();
+     System.out.println(line);
+     for(Reader reader : VerbReaderPool.get)
+
+
 
 
     } catch (Throwable t) {
